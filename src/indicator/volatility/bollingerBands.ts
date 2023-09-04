@@ -18,17 +18,17 @@ export interface BollingerBands {
  * Bollinger Bands.
  *
  * Middle Band = BB_PERIOD SMA.
- * Upper Band = BB_PERIOD SMA + 2 (BB_PERIOD Std)
- * Lower Band = BB_PERIOD SMA - 2 (BB_PERIOD Std)
+ * Upper Band = BB_PERIOD SMA + STD_PERIOD (BB_PERIOD Std)
+ * Lower Band = BB_PERIOD SMA - STD_PERIOD (BB_PERIOD Std)
  *
  * @param closings closing values.
  * @return bollinger bands.
  */
-export function bollingerBands(closings: number[], BB_PERIOD: number): BollingerBands {
-  const std2 = multiplyBy(2, mstd(BB_PERIOD, closings));
+export function bollingerBands(closings: number[], BB_PERIOD: number, STD_PERIOD: number): BollingerBands {
+  const std = multiplyBy(STD_PERIOD, mstd(BB_PERIOD, closings));
   const middleBand = sma(BB_PERIOD, closings);
-  const upperBand = add(middleBand, std2);
-  const lowerBand = subtract(middleBand, std2);
+  const upperBand = add(middleBand, std);
+  const lowerBand = subtract(middleBand, std);
 
   return {
     upperBand,

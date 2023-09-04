@@ -12,7 +12,7 @@ import { bollingerBands } from '../../indicator/volatility/bollingerBands';
  * @return strategy actions.
  */
 export function bollingerBandsStrategy(asset: Asset): Action[] {
-  const bb = bollingerBands(asset.closings);
+  const bb = bollingerBands(asset.closings, 20, 2);
 
   const actions = new Array<Action>(bb.upperBand.length);
 
