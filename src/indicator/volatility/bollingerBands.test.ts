@@ -32,7 +32,7 @@ describe('Bollinger Bands', () => {
       -0.32, -0.52,
     ];
 
-    const actual = bollingerBands(closings);
+    const actual = bollingerBands(closings, 20);
     deepStrictEqual(roundDigitsAll(2, actual.upperBand), expectedUpperBand);
     deepStrictEqual(roundDigitsAll(2, actual.middleBand), expectedMiddleBand);
     deepStrictEqual(roundDigitsAll(2, actual.lowerBand), expectedLowerBand);
