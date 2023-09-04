@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/cinar/indicatorts.git"
+    "url": "git+ssh://git@github.com/ebdran/indicatorts.git"
   },
   "keywords": [
     "analysis",
@@ -46,9 +46,9 @@
   "author": "Onur Cinar <onur.cinar@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cinar/indicatorts/issues"
+    "url": "https://github.com/ebadran/indicatorts/issues"
   },
-  "homepage": "https://github.com/cinar/indicatorts#readme",
+  "homepage": "https://github.com/ebadran/indicatorts#readme",
   "devDependencies": {
     "@types/jest": "^29.5.4",
     "@typescript-eslint/eslint-plugin": "^5.58.0",
